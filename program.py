@@ -1,31 +1,41 @@
 #Write a program to identify if the character is a vowel or consonant
-'''l1=['a','e','i','o','u']
+'''
+l1=['a','e','i','o','u']
 value=input()
 if value in l1:
     print("vowel")
 else:    
-    print("consonant") '''       
+    print("consonant")
+    '''       
     
 #Write a program to identify if the character is an alphabet or not
-'''isalpha() is a built-in string method in Python that checks whether all characters
- in a string are alphabets (letters).'''
- 
-'''print(ord('a'))# gives ASCII values of given character 
-ch= input('enter an alphabet:')
+'''
+isalpha() is a built-in string method in Python that checks whether all characters
+ in a string are alphabets (letters).
+
+print(ord('a'))# gives ASCII values of given character 
+'''
+
+'''
+ch= input('enter an alphabet:')#takes input as string
 if len(ch)==1 and (('a'<=ch<='z') or ('A'<=ch<='Z')):
     print("alphabet")
 else:
-    print("not alphabet")'''
+    print("not alphabet")
+    '''
 #Write a program to find number of digits in an integer
-'''num =int(input("enter number "))
+'''
+num =int(input("enter number "))
 num=[*f'{num}']
 count=0
 for i in num:
     count+=1
-print(count)'''    
+print(count)
+'''    
 
 #pascal's triangle of n rows
-'''n=int(input("number:"))
+'''
+n=int(input("number:"))
 for i in range(0,n):
     for k in range(i,n):
         print("",end=" ")
@@ -33,10 +43,12 @@ for i in range(0,n):
     for j in range(0,i):
         print(c,end=" ")
         c=int(c*(i-j)/(j+1))
-    print(c)'''
-''''     
-    or
-n=int(input("enter number"))
+    print(c)
+'''
+  
+
+'''
+n=int(input("enter number:"))
 cpr=n*2
 for i in range(1,n+1):
     print(" "*cpr,*range(1,i+1),*range(i-1,0,-1))
@@ -58,6 +70,68 @@ m=1
 for i in range(1,num+1):
     m=m*i
 print(m)'''
+
+
+#sum of digits factorial in a given number
+'''
+num=int(input("enter a number"))
+if num<0:
+    num=-num
+sum=0
+while num!=0:
+    digit=num%10
+    fact=1
+    while digit!=0:
+        fact=fact*digit
+        digit-=1
+    sum=sum+fact
+    num=num//10
+print(sum)
+        
+'''
+#strong number :-if sum of digits factorial is original number it is called strong number
+'''
+num=int(input("enter a number"))
+n=num
+if num<0:
+    num=-num
+sum=0
+while num!=0:
+    digit=num%10
+    fact=1
+    while digit!=0:
+        fact=fact*digit
+        digit-=1
+    sum=sum+fact
+    num=num//10
+if n==sum:
+    print("strong number")
+else:
+    print("not strong number")
+'''
+
+#strong numbers in given range
+
+'''
+num1 =int(input("enter firts number:"))
+num2=int(input("enter second number"))
+for num in range(num1,num2+1):
+    n=num
+    sum=0
+    while num!=0:
+        digit=num%10
+        fact=1
+        while digit!=0:
+            fact=fact*digit
+            digit-=1
+        sum=sum+fact
+        num=num//10
+    if n==sum:
+        print(n)
+'''    
+
+
+
 
 #fibonacci series
 
@@ -104,7 +178,9 @@ last_num=int(input("enter last number:"))
 sum=0  
 for i in range(first_num,last_num+1):
     sum+=i
-print(sum)'''
+print(sum)
+
+'''
 
 
 #program to reverse a number
@@ -132,27 +208,23 @@ while (1):
     min_num+=1
 '''
 
-
-# finding a strong number
-
+#find gcd of two numbers
 '''
-num=int(input("enter a number:"))
-sum=0
-p=num
-while num!=0:
-    digit=num%10
-    n=1
-    for i in range(1,digit+1):
-        n=n*i  
-    sum+=n   
-    num=num//10
-if sum==p:
-        print("strong number")
+num1=int(input("enter first number:"))
+num2=int(input("enter second number:"))
+gcd=1
+if num1>num2:
+    max_num=num1
 else:
-        print("not strong number")
-   ''' 
+    max_num=num2
+for i in range(1,max_num):
+    if num1%i==0 and num2%i==0:
+     gcd=gcd*i
+print(gcd)    
+''' 
 
 # finding a perfect number
+#if a number sum of factors is equals to number then number is called perfect number
 '''
 num=int(input("enter a number:"))
 sum=0
@@ -164,6 +236,19 @@ if sum==num:
 else:
     print("not perfect number")
 '''
+#perfect numbers between given range
+'''
+num1=int(input("enter first number:"))
+num2=int(input("enter second number:"))
+for num in range(num1,num2):
+    sum=0
+    for i in range(1,num+1):
+        if num%i==0 and i!=num:
+            sum+=i
+    if sum==num:
+        print(num)
+'''    
+
 
 #addition of two fractions
 '''
@@ -177,23 +262,10 @@ fraction_deno=(deno1*deno2)
 print("fraction_num/fraction_deno",fraction_num/fraction_deno)
 print("fraction is: {}/{}".format(fraction_num,fraction_deno))'''
 
-
-#find gcd of two numbers
-'''
-num1=int(input("enter first number:"))
-num2=int(input("enter second number:"))
-gcd=1
-if num1>num2:
-    max_num=num1
-else:
-    max_num=num2
-for i in range(1,max_num):
-    if num1%i==0 and num2%i==0:
-     gcd=gcd*i
-     max_num-=1
-print(gcd)    
- '''       
+     
 #checking armstrong number or not
+#if a number digits power of len(number)==original number 
+
 '''
 num=int(input("enter a number:"))
 p=[*f'{num}']
@@ -212,6 +284,26 @@ else:
     print("not armstrong number")
 
 '''
+
+
+#armstrong number between two numbers
+'''
+num1 =int(input("enter firts number:"))
+num2=int(input("enter second number"))
+for i in range(num1,num2+1):
+    p=i
+    l=[*f"{i}"]
+    x=len(l)
+    sum=0
+    while i!=0:
+         digit=i%10
+         sum+=digit**x
+         i=i//10
+    if sum==p:
+        print(p)
+         '''
+         
+         
 #check number is leap year or not
 '''  
 year=int(input("enter year:"))
@@ -263,22 +355,7 @@ for i in range(num1,num2+1):
         k+=1
 print("total number of primenumbers",k)
         '''
-#armstring number between two numbers
-'''
-num1 =int(input("enter firts number:"))
-num2=int(input("enter second number"))
-for i in range(num1,num2+1):
-    p=i
-    l=[*f"{i}"]
-    x=len(l)
-    sum=0
-    while i!=0:
-         digit=i%10
-         sum+=digit**x
-         i=i//10
-    if sum==p:
-        print(p)
-         '''
+
          
 #express a number as sum of two prime numbers
 '''
@@ -295,8 +372,8 @@ for i in range(1,num+1):
             if (num-i)%k==0:
                     n+=1
         if n==2:
-                  print(i,num-i)'''
-                  
+                  print(i,num-i)
+  '''                
 #replace 0's with 1's in given integer
 '''
 num=int(input("enter a number:"))
@@ -349,6 +426,28 @@ if num1<0 and num2<0:
     print("quadrant3")
 if num1>0 and num2<0:
     print("quadrant4")'''
+    
+#no of times digit occured
+num=int(input("enter a number"))
+if num<0:
+    num=-num
+l1=[*f'{num}']
+l2=[]
+while num!=0:
+    digit=num%10
+    num=num//10
+    count=0
+    if digit in l2:
+        continue
+    else:
+        l2=l2+[digit]
+        for i in l1:
+           if i==f'{digit}':
+               count+=1
+        print("{0} occured {1} times".format(digit,count))
+
+            
+        
     
     
 
