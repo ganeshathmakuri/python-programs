@@ -1,4 +1,4 @@
-#Write a program to identify if the character is a vowel or consonant
+#1Write a program to identify if the character is a vowel or consonant
 '''
 l1=['a','e','i','o','u']
 value=input()
@@ -8,7 +8,7 @@ else:
     print("consonant")
     '''       
     
-#Write a program to identify if the character is an alphabet or not
+#2Write a program to identify if the character is an alphabet or not
 '''
 isalpha() is a built-in string method in Python that checks whether all characters
  in a string are alphabets (letters).
@@ -23,7 +23,7 @@ if len(ch)==1 and (('a'<=ch<='z') or ('A'<=ch<='Z')):
 else:
     print("not alphabet")
     '''
-#Write a program to find number of digits in an integer
+#3Write a program to find number of digits in an integer
 '''
 num =int(input("enter number "))
 num=[*f'{num}']
@@ -33,7 +33,7 @@ for i in num:
 print(count)
 '''    
 
-#pascal's triangle of n rows
+#4pascal's triangle of n rows
 '''
 n=int(input("number:"))
 for i in range(0,n):
@@ -55,7 +55,7 @@ for i in range(1,n+1):
     cpr-=2
 '''
             
-#factorial of number
+#5factorial of number
 '''
 num= int(input("enter a number:"))
 m=1
@@ -72,7 +72,7 @@ for i in range(1,num+1):
 print(m)'''
 
 
-#sum of digits factorial in a given number
+#6sum of digits factorial in a given number
 '''
 num=int(input("enter a number"))
 if num<0:
@@ -89,7 +89,7 @@ while num!=0:
 print(sum)
         
 '''
-#strong number :-if sum of digits factorial is original number it is called strong number
+#7strong number :-if sum of digits factorial is original number it is called strong number
 '''
 num=int(input("enter a number"))
 n=num
@@ -110,7 +110,7 @@ else:
     print("not strong number")
 '''
 
-#strong numbers in given range
+#8strong numbers in given range
 
 '''
 num1 =int(input("enter firts number:"))
@@ -133,7 +133,7 @@ for num in range(num1,num2+1):
 
 
 
-#fibonacci series
+#9fibonacci series
 
 '''
 num= int(input("enter a number:"))
@@ -146,7 +146,7 @@ for i in range(1,num-1):
     n=p
 print(p)'''
 
-#sum of digits
+#10sum of digits
 '''
 num= int(input("enter a number:"))
 sum=0
@@ -156,7 +156,7 @@ while num!=0:
     sum+=digit
 print(sum)    
     '''
-#sum of natural number
+#11sum of natural number
 '''
 num=int(input("enter the range:"))
 sum=0
@@ -171,7 +171,7 @@ sum=(num*(num+1))//2
 print(sum)
 
 '''   
- #sum of numbers in the given range
+ #12 sum of numbers in the given range
 ''' 
 first_num=int(input("enter first number:"))
 last_num=int(input("enter last number:"))
@@ -183,7 +183,7 @@ print(sum)
 '''
 
 
-#program to reverse a number
+#13 program to reverse a number
 '''
 num=int(input("enter a number:"))
 temp=0
@@ -193,7 +193,7 @@ while num!=0:
     num=num//10
 print(temp,end="")'''
 
-#finding lcm of two numbers
+#14 finding lcm of two numbers
 '''
 num1=int(input("enter first number:"))
 num2=int(input("enter second number:"))
@@ -208,7 +208,7 @@ while (1):
     min_num+=1
 '''
 
-#find gcd of two numbers
+#15 find gcd of two numbers
 '''
 num1=int(input("enter first number:"))
 num2=int(input("enter second number:"))
@@ -223,7 +223,7 @@ for i in range(1,max_num):
 print(gcd)    
 ''' 
 
-# finding a perfect number
+#16  finding a perfect number
 #if a number sum of factors is equals to number then number is called perfect number
 '''
 num=int(input("enter a number:"))
@@ -236,7 +236,7 @@ if sum==num:
 else:
     print("not perfect number")
 '''
-#perfect numbers between given range
+#17 perfect numbers between given range
 '''
 num1=int(input("enter first number:"))
 num2=int(input("enter second number:"))
@@ -250,7 +250,7 @@ for num in range(num1,num2):
 '''    
 
 
-#addition of two fractions
+#18 addition of two fractions
 '''
 num1=int(input("enter the first fracton numerator:"))
 deno1=int(input("enter the first fracton denominator:"))
@@ -263,7 +263,7 @@ print("fraction_num/fraction_deno",fraction_num/fraction_deno)
 print("fraction is: {}/{}".format(fraction_num,fraction_deno))'''
 
      
-#checking armstrong number or not
+#19 checking armstrong number or not
 #if a number digits power of len(number)==original number 
 
 '''
@@ -286,7 +286,7 @@ else:
 '''
 
 
-#armstrong number between two numbers
+#20 armstrong number between two numbers
 '''
 num1 =int(input("enter firts number:"))
 num2=int(input("enter second number"))
@@ -304,7 +304,7 @@ for i in range(num1,num2+1):
          '''
          
          
-#check number is leap year or not
+#21 check number is leap year or not
 '''  
 year=int(input("enter year:"))
 if year%100==0 and year%400==0:
@@ -314,7 +314,7 @@ elif year%4==0:
 else:
     print("normal year")
         '''
-#check prime number or not
+#22 check prime number or not
 '''
 num=int(input("enter a number:"))
 count=0
@@ -326,7 +326,7 @@ if count==2:
 else:
    print("not prime number")     
  '''   
-#palindrome or not
+#23 palindrome or not
 '''
 num=int(input("enter number:"))
 p=num
@@ -340,7 +340,7 @@ if p==reverse_num:
 else:
     print("not palinddrome")'''
     
-#prime numbers in given range
+#24 prime numbers in given range
 ''' 
 num1=int(input("enter start number:"))
 num2=int(input("enter last range:"))
@@ -357,7 +357,7 @@ print("total number of primenumbers",k)
         '''
 
          
-#express a number as sum of two prime numbers
+#25 express a number as sum of two prime numbers
 '''
 num=int(input("enter a number:"))
 
@@ -374,7 +374,7 @@ for i in range(1,num+1):
         if n==2:
                   print(i,num-i)
   '''                
-#replace 0's with 1's in given integer
+#26 replace 0's with 1's in given integer
 '''
 num=int(input("enter a number:"))
 n=0
@@ -391,7 +391,7 @@ while num!=0:
         i+=1
 print(n)'''
 
-# pyramid pattern using stars
+#27 pyramid pattern using stars
 '''
 rows=int(input("enter number of rows:"))
 cpr=rows*2
@@ -403,7 +403,7 @@ for rownum in range(1,rows+1):
        print("*",end=" ")
     print()
     cpr-=2'''
-# pyramid pattern using numbers 
+#28 pyramid pattern using numbers 
 '''
 rows= int(input("enter a number:"))
 cpr=rows*2
@@ -411,10 +411,10 @@ for rownum in range(1,rows+1):
     print(" "*cpr,*range(1,rownum+1),*range(rownum-1,0,-1))
     cpr-=2'''
     
-# total number of handshakes
+#29 total number of handshakes
 #formula (n*(n-1))/2
 
-#in which quadrant coordinates lies
+#30in which quadrant coordinates lies
 '''
 num1=int(input("enter first quadrant:"))
 num2=int(input("enter second quadrant:"))
@@ -427,7 +427,8 @@ if num1<0 and num2<0:
 if num1>0 and num2<0:
     print("quadrant4")'''
     
-#no of times digit occured
+#31 no of times digit occured
+'''
 num=int(input("enter a number"))
 if num<0:
     num=-num
@@ -445,9 +446,33 @@ while num!=0:
            if i==f'{digit}':
                count+=1
         print("{0} occured {1} times".format(digit,count))
-
-            
+'''       
         
-    
+#write a python program to  print the all combinations of n-digit number
+
+'''
+num=int(input("enter a number:"))
+if num<0:
+    num=-num
+max=0
+min=9
+l1=0
+p=num
+for _ in [*f"{num}"]:
+    l1+=1
+while num!=0:
+    digit=num%10
+    if max<digit:
+        max=digit
+    if min>digit:
+        min=digit
+    num=num//10
+start=min*10**(l1-1)
+end=max*10**(l1-1)
+for i in range(start,end):
+    if {*f'{i}'} == {*f'{p}'}:
+        print(i)
+ '''       
+
     
 
